@@ -47,4 +47,4 @@ This will take a few minutes but only has to be done once. If you ever want to b
 > docker run -v ~/my_downloads:/meshes --rm meshdown:v1 python meshdown.py \
 > 720575940611425556,720575940634015088
 
-If everything works, you'll end up with `~/meshes/720575940611425556.obj` and `~/meshes/720575940634015088.obj`.
+If everything works, you'll end up with `~/my_downloads/720575940611425556.obj` and `~/my_downloads/720575940634015088.obj`.
