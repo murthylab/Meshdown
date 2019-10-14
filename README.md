@@ -38,13 +38,13 @@ This will take a few minutes but only has to be done once. If you ever want to b
 
 # Using meshdown
 
-1. Choose a directory where the mesh `obj` files should be downloaded. For this example I'll use `~/my_downloads/`.
+1. Choose a directory where the mesh `obj` files should be downloaded. For this example I'll use `/path/to/my_downloads/`.
 
 2. Get the list of mesh id's you want to download. For this example, I'll use `720575940611425556,720575940634015088`.
 
 2. From a command line (e.g., Cmder), run
 
-> docker run -v ~/my_downloads:/meshes --rm meshdown:v1 python meshdown.py \
+> docker run -v /path/to/my_downloads:/meshes --rm meshdown:v1 python meshdown.py \
 > 720575940611425556,720575940634015088
 
-If everything works, you'll end up with `~/my_downloads/720575940611425556.obj` and `~/my_downloads/720575940634015088.obj`.
+If everything works, you'll end up with `/path/to/my_downloads/720575940611425556.obj` and `/path/to/my_downloads/720575940634015088.obj`.
