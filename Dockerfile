@@ -7,4 +7,5 @@ RUN pip install vtk mayavi annotationframeworkclient meshparty
 FROM meshparty
 
 ADD *.json /root/.cloudvolume/secrets/
+COPY datasource.txt datasource.txt
 COPY meshdown.py meshdown.py
