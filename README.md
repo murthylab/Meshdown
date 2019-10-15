@@ -6,9 +6,9 @@ This is a script to create a Docker image for downloading 3d meshes as `obj` fil
 
 1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop).
 
-2. Download the files from this repository. The easiest way to do this is to run `git clone https://github.com/murthylab/Meshdown.git` from [Cmder](https://cmder.net).
+2. Download the files from this repository. The easiest way to do this is to run `git clone https://github.com/murthylab/Meshdown.git` from [Cmder](https://cmder.net). This will create a `Meshdown` directory inside your current working directory.
 
-3. The default datasource is set in `datasource.txt`. If you want to use a different datasource, edit this file.
+3. The default datasource is set in `datasource.txt`. If you want to use a different datasource, edit this file inside the `Meshdown` directory.
 
 4. Some CloudVolume datasources require [credentials](https://github.com/seung-lab/cloud-volume#credentials) for access. If you want to use a datasource which requires credentials, you'll need to create a file with your key.
 
@@ -16,11 +16,11 @@ This is a script to create a Docker image for downloading 3d meshes as `obj` fil
 
  Here are instructions that work for a Graphene datasource:
 
-1. Go [here](https://fafbv2.dynamicannotationframework.com/auth/refresh_token) and if prompted, sign in with the Google account that has access to this datasource.
+1. Go <a href="https://fafbv2.dynamicannotationframework.com/auth/refresh_token" target="_blank">here</a> and if prompted, sign in with the Google account that has access to this datasource.
 
 2. You'll see something like `"2fd4e1c67a2d28fced849ee1bb76e739"`. Copy this text.
 
-3. In the directory of files you downloaded from this repository, create a text file called `chunkedgraph-secret.json` with this text:
+3. In the directory of files you downloaded from this repository, create a text file called `chunkedgraph-secret.json` (inside the `Meshdown` directory) with this text:
 
 > {"token": "..."}
 
@@ -30,9 +30,11 @@ When you build the docker image, this file will be copied into the image in the 
 
 ## Building the image
 
-Navigate to the directory of files from this repository, and run
+Navigate to inside the `Meshdown` directory, and run
 
 > docker build -t meshdown:v1 .
+
+(Note the "." at the end.)
 
 This will take a few minutes but only has to be done once. If you ever want to build a new image that uses a different datasource and/or credentials, you'll have to do this again but it won't take very long since it doesn't have to rebuild the full image.
 
