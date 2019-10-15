@@ -1,6 +1,6 @@
 # Meshdown
 
-This is a script to create a Docker image for downloading 3d meshes as `obj` files. Some of the required packages don't currently support Windows, and Docker allows you to run Linux inside a container on a Windows machine.
+This is a script to create a Docker image for downloading 3d meshes as `obj` files which can be imported into [MeshLab](http://www.meshlab.net) (or other 3d triangular mesh software). Some of the required packages don't currently support Windows, and Docker allows you to run Linux inside a container on a Windows machine.
 
 # Installation
 
