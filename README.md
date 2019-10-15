@@ -16,7 +16,7 @@ This is a script to create a Docker image for downloading 3d meshes as `obj` fil
 
  Here are instructions that work for a Graphene datasource:
 
-1. Go <a href="https://fafbv2.dynamicannotationframework.com/auth/refresh_token" target="_blank">here</a> and if prompted, sign in with the Google account that has access to this datasource.
+1. Go [here](https://fafbv2.dynamicannotationframework.com/auth/refresh_token) and if prompted, sign in with the Google account that has access to this datasource.
 
 2. You'll see something like `"2fd4e1c67a2d28fced849ee1bb76e739"`. Copy this text.
 
@@ -40,13 +40,17 @@ This will take a few minutes but only has to be done once. If you ever want to b
 
 # Using meshdown
 
-1. Choose a directory where the mesh `obj` files should be downloaded. For this example I'll use `/path/to/my_downloads/`.
+1. Choose a directory where the mesh `obj` files should be downloaded. For this example I'll use `c:/path/to/my_downloads/`.
 
 2. Get the list of mesh id's you want to download. For this example, I'll use `720575940611425556,720575940634015088`.
 
 2. From a command line (e.g., Cmder), run
 
-> docker run -v /path/to/my_downloads:/meshes --rm meshdown:v1 python meshdown.py \
+> docker run -v <download_path>:/meshes --rm meshdown:v1 python meshdown.py <mesh_list>
+
+with `<download_path>` and `<mesh_list>` replaced with the appropriate text. For example, with `c:/path/to/my_downloads` as the download path and `720575940611425556,720575940634015088` as the mesh id's, this will be:
+
+> docker run -v c:/path/to/my_downloads:/meshes --rm meshdown:v1 python meshdown.py \
 > 720575940611425556,720575940634015088
 
-If everything works, you'll end up with `/path/to/my_downloads/720575940611425556.obj` and `/path/to/my_downloads/720575940634015088.obj`.
+If everything works, you'll end up with `c:/path/to/my_downloads/720575940611425556.obj` and `c:/path/to/my_downloads/720575940634015088.obj`.
