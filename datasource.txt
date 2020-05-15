@@ -1,1 +1,1 @@
-graphene://https://fafbv2.dynamicannotationframework.com/segmentation/1.0/fly_v31
+graphene://https://prodv1.flywire-daf.com/segmentation/1.0/fly_v31
