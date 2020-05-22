@@ -5,7 +5,7 @@ meshlist = sys.argv[1]
 meshlist = list(map(int, meshlist.split(",")))
 
 with open("datasource.txt", "r") as f:
-    datasource = f.read()
+    datasource = f.read().strip()
 
 save_dir = "meshes"
 
