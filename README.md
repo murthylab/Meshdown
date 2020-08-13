@@ -16,7 +16,7 @@ This is a script to create a Docker image for downloading 3d meshes as `obj` fil
 
  Here are instructions that work for a Graphene datasource:
 
-1. Go [here](https://fafbv2.dynamicannotationframework.com/auth/refresh_token) and if prompted, sign in with the Google account that has access to this datasource.
+1. Go [here](https://globalv1.flywire-daf.com/auth/api/v1/refresh_token) and if prompted, sign in with the Google account that has access to this datasource.
 
 2. You'll see something like `"2fd4e1c67a2d28fced849ee1bb76e739"`. Copy this text.
 
